@@ -11,10 +11,18 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+    private void Update()
+    {
+        moveVector.x = Input.GetAxisRaw("Horizontal");
+        moveVector.y = Input.GetAxisRaw("Vertical");
+    }
+
     void FixedUpdate()
     {
-        moveVector.x = Input.GetAxis("Horizontal");
-        moveVector.y = Input.GetAxis("Vertical");
-        rb.MovePosition(rb.position + moveVector * speed);
+        //moveVector.x = Input.GetAxisRaw("Horizontal");
+        //moveVector.y = Input.GetAxisRaw("Vertical");
+        //rb.MovePosition(rb.position + moveVector * speed);
+        rb.linearVelocity = moveVector.normalized * speed;
     }
+
 }
