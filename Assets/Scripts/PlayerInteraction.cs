@@ -25,10 +25,17 @@ public class PlayerInteraction : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("interactable"))
+        if (!other.CompareTag("interactable"))
         {
+            return;
+        }
+
+        Iteractable interactable = other.GetComponent<Iteractable>();
+
+        if (interactable != null && interactable == currentInteractable)
+        {
+            interactable.HideHint();
             currentInteractable = null;
-            currentInteractable.HideHint();
         }
     }
 }
