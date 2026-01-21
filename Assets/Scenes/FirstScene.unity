@@ -443,7 +443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueUI
   dialogueText: {fileID: 1458306698}
-  dusplayTime: 3
+  letterDelay: 0.04
 --- !u!1 &363364719
 GameObject:
   m_ObjectHideFlags: 0
@@ -1601,8 +1601,8 @@ Transform:
   m_GameObject: {fileID: 1332609359}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.23, y: 0.03, z: 0}
-  m_LocalScale: {x: 2.379, y: 9.987836, z: 1}
+  m_LocalPosition: {x: 10.23, y: 0.0457, z: 0}
+  m_LocalScale: {x: 2.379, y: 10.851967, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
